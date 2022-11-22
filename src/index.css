@@ -28,8 +28,17 @@ background-image: url('IMG-2163.PNG');
 
 }
 
-#bio {
-  text-indent: -20px;
+#bio-1{
+  text-indent: 10px;
   line-height: 30px;
   letter-spacing: 1.5px;
+  margin-top: 10px
 }
+
+#bio-2 {
+  text-indent: 10px;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+

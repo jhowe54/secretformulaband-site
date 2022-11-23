@@ -4,6 +4,9 @@
 
 
 body {
+  background-color: black;
+  scrollbar-color: black;
+  box-sizing: border-box;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -18,15 +21,7 @@ code {
 }
 
 
-#header {
- background-size: contain;
- background-repeat: no-repeat;
- background-position: center;
-background-image: url('IMG-2163.PNG');
 
-  
-
-}
 
 #bio-1{
   text-indent: 10px;

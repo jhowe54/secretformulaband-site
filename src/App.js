@@ -1,14 +1,15 @@
 import { BiMenu } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
 import { ReactComponent as SnailLogo } from "./snailfinal.svg";
-import group from "./group.JPG";
+import group from "./group.JPG"
 function App() {
   return (
     <div className="App flex flex-col">
       <header
         id="header"
         className="flex flex-col justify-center content-center text-white text-4xl bg bg-black "
-      >{/*
+      >
+        {/*
         <BiMenu
           size={70}
           className="absolute md:top-0 md:right-0 md:visible invisible cursor-pointer hover:text-slate-200 p-2 mx-auto"
@@ -21,10 +22,11 @@ function App() {
         />
       </header>
       <main className="flex flex-col items-center bg-black text-white">
-        <img
-          src={group}
-          className="lg:w-2/3 w-full xl:p-0  rounded-md my-8 box-content"
-        />
+        
+ <img
+            src={group}
+            className="lg:w-2/3 w-full xl:p-0  rounded-md my-8 box-content"
+          />
         <p id="bio-1" className=" lg:px-20 md:px-10 px-4 py-4">
           Secret Formula Band is a southern rock group out of Charlotte, North
           Carolina, that has been together since February 2022. The group brings
@@ -42,7 +44,14 @@ function App() {
           and Matt Ziegelstein frequently coming home to jam with the Formulads.
         </p>
         <section className="flex flex-col justify-center content-center items-center w-full text-white p-4 text-center">
-          <h2 className="text-5xl mb-2">Media</h2>
+          <h2 className="text-5xl mb-4">Media</h2>
+          <div className="accordion-container w-full">
+            <div id="acc-img-1" className="accordion-img"></div>
+            <div id="acc-img-2" className="accordion-img"></div>
+            <div id="acc-img-3" className="accordion-img"></div>
+            <div id="acc-img-4" className="accordion-img"></div>
+            <div id="acc-img-5" className="accordion-img"></div>
+        </div>
           {/*Instagram feed */}
           <iframe
             className="my-4"

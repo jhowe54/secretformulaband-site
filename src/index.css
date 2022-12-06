@@ -19,9 +19,59 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.accordion-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
 
+  margin: auto;
+}
 
+.accordion-img {
+  width: 20%;
+  height: 600px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  transition: all 1s ease-in-out;
+  
+}
+.accordion-img:hover {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50%;
+}
 
+#acc-img-1 {
+  background-image: url("../public//media/IMG_1200.JPG");
+  background-position: 48% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+#acc-img-2 {
+  background-image: url("../public/media/IMG_1218.JPG");
+  background-position: 80% 60%;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+#acc-img-3 {
+  background-image: url("../public/media/IMG_1204.JPG");
+  background-position: 65% 45%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#acc-img-4 {
+  background-image: url("../public/media/IMG_1203.JPG");
+  background-position: 48% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#acc-img-5 {
+  background-image: url("../public/media/IMG_1224.JPG");
+  background-position: 48% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 #bio-1{
   text-indent: 10px;
@@ -40,6 +90,19 @@ code {
 #video {
   aspect-ratio: 16 / 9;
   width: 100%;
+}
+
+@media (max-width: 400px) {
+ .accordion-container {
+  flex-direction: column;
+ }
+ .accordion-img {
+  display: none;
+ }
+
+ .accordion-img:hover {
+  display: none;
+}
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -78,20 +78,8 @@ function App() {
       <footer className="text-white bg bg-[#0C0C0C] p-4 flex flex-col items-center justify-center content-center text-center ">
         <h2 className="text-center text-5xl mb-4">Upcoming Shows</h2>
         <p className="my-2">
-          Friday, December 2<sup>nd</sup> at the Visulite Theatre
+          No upcoming shows right now, check back soon!
         </p>
-        <p className="text-center mb-4">
-          Get your tickets{" "}
-          <a
-            className="text-blue-300"
-            target="_blank"
-            href="https://www.visulite.com/showDetails.cfm?showID=10409"
-          >
-            here
-          </a>
-          !
-        </p>
-        <>&#x2022;</>
         <h2 className="text-4xl my-4">Book a show</h2>
         <p className="">
           Send us an email at:{" "}

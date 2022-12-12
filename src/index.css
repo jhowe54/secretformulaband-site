@@ -33,7 +33,7 @@ code {
   flex-grow: 0;
   flex-shrink: 1;
   transition: all 1s ease-in-out;
-  
+  flex-basis: 20%;
 }
 .accordion-img:hover {
   flex-grow: 0;

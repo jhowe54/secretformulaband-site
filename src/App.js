@@ -2,12 +2,15 @@ import { BiMenu } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
 import { ReactComponent as SnailLogo } from "./snailfinal.svg";
 import group from "./group.JPG"
+import {Link} from "react-router-dom"
+import Gallery from "./Gallery";
 function App() {
   return (
     <div className="App flex flex-col">
+      
       <header
         id="header"
-        className="flex flex-col justify-center content-center text-white text-4xl bg bg-black "
+        className="mt-10 flex flex-col justify-center content-center text-white text-4xl bg bg-black "
       >
         {/*
         <BiMenu
@@ -43,26 +46,9 @@ function App() {
           know it today, with original members David Gardener, Ashby Wickham,
           and Matt Ziegelstein frequently coming home to jam with the Formulads.
         </p>
-        <section className="flex flex-col justify-center content-center items-center w-full text-white p-4 text-center">
-          <h2 className="text-5xl mb-4">Media</h2>
-          <div className="accordion-container w-full">
-            <div id="acc-img-1" className="accordion-img"></div>
-            <div id="acc-img-2" className="accordion-img"></div>
-            <div id="acc-img-3" className="accordion-img"></div>
-            <div id="acc-img-4" className="accordion-img"></div>
-            <div id="acc-img-5" className="accordion-img"></div>
-        </div>
-          {/*Instagram feed */}
-          <iframe
-            className="my-4"
-            id="video"
-            src="https://www.youtube.com/embed/KJto3mxMruQ"
-            title="Secret Formula Band - Charlotte, NC"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <h2 className="text-5xl mb-2">Social</h2>
+        <section id="media" className="flex flex-col justify-center content-center items-center w-full text-white p-4 text-center">
+        <Gallery />
+          <h2 id="social" className="text-5xl mb-2">Social</h2>
           <a id="insta" href="https://www.instagram.com/secretformulaband/">
             <FaInstagram id="insta-icon" size={70} />
           </a>

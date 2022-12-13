@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: black;
   scrollbar-color: black;
@@ -13,6 +15,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#booking-form-outer {
+  -webkit-box-shadow: 6px 6px 36px 12px rgba(255,255,255,0.1);
+  -moz-box-shadow: 6px 6px 36px 12px rgba(255,255,255,0.1);
+  box-shadow: 6px 4px 11px 14px rgba(75, 74, 74, 0.1) ;
+  border: 1px solid rgba(75, 74, 74, 0.2);
+  background: rgb(0,0,0);
+background: linear-gradient(square, rgba(0,0,0,1) 92%, rgba(31,31,31,1) 100%, rgba(0,0,0,1) 92%, rgba(31,31,31,1) 100%);
+  
+}
+
+input {
+  color-scheme: dark;
 }
 
 code {

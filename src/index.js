@@ -5,20 +5,22 @@ import App from "./App";
 import Bookings from "./Bookings";
 import { inject } from "@vercel/analytics";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-
+import AdminScreen from "./admin/AdminScreen";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <nav className="w-full mx-auto">
-      <div className="w-full text-lg p-6 flex flex-row md:justify-end justify-center">
-        <a className="text-white p-4" href="#media">Media</a>
-        <a className="text-white p-4" href="#social">Social</a>
-        <Link to={"/bookings"} className="text-white p-4" href="#TODO">Book a Show</Link>
+    <nav id="navbar" className="w-full mx-auto">
+      <div className="w-full text-lg p-6 flex flex-row md:flex-nowrap flex-wrap md:justify-end justify-center">
+      <Link to={"/"} className="text-white md:p-4 p-2">Home</Link>
+        <a className="text-white md:p-4 p-2" href="/#media">Media</a>
+        <a className="text-white md:p-4 p-2" href="/#social">Social</a>
+        <Link to={"/bookings"} className="text-white md:p-4 p-2" href="#TODO">Book a Show</Link>
       </div>
     </nav>
     <Routes>
-      <Route exact path="/" element={<App />} />
+      <Route path="/" element={<App />} />
       <Route exact path="/bookings" element={<Bookings />} />
+      <Route private exact path="/admin" element={<AdminScreen />} />
     </Routes>
   </BrowserRouter>
 );

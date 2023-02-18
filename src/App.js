@@ -1,10 +1,17 @@
-import { BiMenu } from "react-icons/bi";
+
 import { FaInstagram } from "react-icons/fa";
 import { ReactComponent as SnailLogo } from "./snailfinal.svg";
 import group from "./group.JPG"
-import {Link} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import Gallery from "./Gallery";
+
+import Shows from "./Shows";
+
 function App() {
+  const navigate = useNavigate();
+  
+
+
   return (
     <div className="App flex flex-col">
       
@@ -18,10 +25,11 @@ function App() {
           className="absolute md:top-0 md:right-0 md:visible invisible cursor-pointer hover:text-slate-200 p-2 mx-auto"
         /> */}
         <SnailLogo
+          id="snail"
           fill="#FFFFFF"
           stroke="#FFFFFF"
           color="#FFFFFF"
-          className=" mx-auto bg w-full"
+          className="mx-auto bg w-full md:h-[400pt] h-[auto]"
         />
       </header>
       <main className="flex flex-col items-center bg-black text-white">
@@ -29,6 +37,7 @@ function App() {
  <img
             src={group}
             className="lg:w-2/3 w-full xl:p-0  rounded-md my-8 box-content"
+            alt="Band Pic"
           />
         <p id="bio-1" className=" lg:px-20 md:px-10 px-4 py-4">
           Secret Formula Band is a southern rock group out of Charlotte, North
@@ -63,10 +72,10 @@ function App() {
       </main>
       <footer className="text-white bg bg-[#0C0C0C] p-4 flex flex-col items-center justify-center content-center text-center ">
         <h2 className="text-center text-5xl mb-4">Upcoming Shows</h2>
-        <p className="my-2">
-          No upcoming shows right now, check back soon!
-        </p>
+        <Shows /> 
         <h2 className="text-4xl my-4">Book a show</h2>
+        <button onClick={() => navigate("/bookings") } className="bg p-2 my-6 rounded-lg bg-blue-400">Book Now</button>
+        <p className="mb-6">OR</p>
         <p className="">
           Send us an email at:{" "}
           <a

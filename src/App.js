@@ -55,7 +55,7 @@ function App() {
           know it today, with original members David Gardener, Ashby Wickham,
           and Matt Ziegelstein frequently coming home to jam with the Formulads.
         </p>
-        <section id="media" className="flex flex-col justify-center content-center items-center w-full text-white p-4 text-center">
+        <section className="flex flex-col justify-center content-center items-center w-full text-white p-4 text-center">
         <Gallery />
           <h2 id="social" className="text-5xl mb-2">Social</h2>
           <a id="insta" href="https://www.instagram.com/secretformulaband/">
@@ -70,7 +70,7 @@ function App() {
           </a>
         </section>
       </main>
-      <footer className="text-white bg bg-[#0C0C0C] p-4 flex flex-col items-center justify-center content-center text-center ">
+      <section id="shows" className="text-white bg bg-[#0C0C0C] p-4 flex flex-col items-center justify-center content-center text-center ">
         <h2 className="text-center text-5xl mb-4">Upcoming Shows</h2>
         <Shows /> 
         <h2 className="text-4xl my-4">Book a show</h2>
@@ -85,7 +85,7 @@ function App() {
             secretformulaband@gmail.com
           </a>
         </p>
-      </footer>
+      </section>
     </div>
   );
 }

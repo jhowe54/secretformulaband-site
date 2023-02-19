@@ -9,7 +9,7 @@ function Shows() {
       try {
         const data = await loadSchedule();
         console.log("DATA", data)
-        setShows(data);
+        setShows(data.sort((a, b) => new Date(a.date) - new Date(b.date)));
       } catch (error) {
         if (error.name !== "AbortError") {
           throw error;

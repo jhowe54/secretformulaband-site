@@ -13,8 +13,8 @@ root.render(
     <nav id="navbar" className="w-full mx-auto">
       <div className="w-full text-lg p-6 flex flex-row md:flex-nowrap flex-wrap md:justify-end justify-center">
       <Link to={"/"} className="text-white md:p-4 p-2">Home</Link>
-        <a className="text-white md:p-4 p-2" href="/#media">Media</a>
-        <a className="text-white md:p-4 p-2" href="/#social">Shows</a>
+        <a className="text-white md:p-4 p-2" href="#media">Media</a>
+        <a className="text-white md:p-4 p-2" href="#shows">Shows</a>
         <Link to={"/bookings"} className="text-white md:p-4 p-2" href="#TODO">Book a Show</Link>
       </div>
     </nav>

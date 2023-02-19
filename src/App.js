@@ -55,7 +55,7 @@ function App() {
           know it today, with original members David Gardener, Ashby Wickham,
           and Matt Ziegelstein frequently coming home to jam with the Formulads.
         </p>
-        <section className="flex flex-col justify-center content-center items-center w-full text-white p-4 text-center">
+        <section id="media" className="flex flex-col justify-center content-center items-center w-full text-white p-4 text-center">
         <Gallery />
           <h2 id="social" className="text-5xl mb-2">Social</h2>
           <a id="insta" href="https://www.instagram.com/secretformulaband/">
@@ -74,7 +74,7 @@ function App() {
         <h2 className="text-center text-5xl mb-4">Upcoming Shows</h2>
         <Shows /> 
         <h2 className="text-4xl my-4">Book a show</h2>
-        <button onClick={() => navigate("/bookings") } className="bg p-2 my-6 rounded-lg bg-blue-400">Book Now</button>
+        <button onClick={() => navigate("/bookings") } className="bg p-2 my-6 rounded-lg bg-blue-400  hover:bg-white hover:text-blue-400">Book Now</button>
         <p className="mb-6">OR</p>
         <p className="">
           Send us an email at:{" "}

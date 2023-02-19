@@ -6,6 +6,7 @@ import Bookings from "./Bookings";
 import { inject } from "@vercel/analytics";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import AdminScreen from "./admin/AdminScreen";
+import Submitted from "./Submitted";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -20,6 +21,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route exact path="/bookings" element={<Bookings />} />
+      <Route path="/submitted" element={<Submitted/>} />
       <Route private exact path="/admin" element={<AdminScreen />} />
     </Routes>
   </BrowserRouter>

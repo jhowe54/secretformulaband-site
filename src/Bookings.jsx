@@ -34,7 +34,7 @@ function Bookings() {
     const  handleSubmit = async (e) => {
         e.preventDefault()
         const data = await postBookingDetails(bookingDetails)
-        //TODO: Form submitted screen
+        navigate("/submitted")
     }
 
     return (        

@@ -2,6 +2,7 @@ import { supabase } from "./client";
 
 async function postBookingDetails(bookingDetails) {
   try {
+    // eslint-disable-next-line no-unused-vars
     const { data } = await supabase.from("bookings").insert({
       firstName: bookingDetails.firstName,
       lastName : bookingDetails.lastName,

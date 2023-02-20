@@ -1,14 +1,11 @@
 function Shows({ shows, setShows }) {
-  function convertDate(inputDate) {
-    console.log(inputDate);
-    const options = {
-      year : "numeric",
-      month: "long",
-      day  : "numeric",
-    };
-    const date          = new Date(inputDate);
-    const convertedDate = new Intl.DateTimeFormat("en-US", options).format(date);
-    return convertedDate;
+
+  function convertDate(dateString) {
+    const [year, month, day] = dateString.split('-');
+    const months             = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const monthName          = months[parseInt(month) - 1];
+    const formattedDate      = `${monthName} ${parseInt(day)}, ${year}`;
+    return formattedDate;
   }
 
   function convertTime(inputTime) {
@@ -26,11 +23,12 @@ function Shows({ shows, setShows }) {
     return estTime;
   }
   function createGoogleMapsLink(address) {
-    const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-    const linkElement = document.createElement('a');
-    linkElement.href = mapsLink;
-    linkElement.target = '_blank';
-    linkElement.textContent = `View on Google Maps: ${address}`;
+    const mapsLink                = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    const linkElement             = document.createElement('a');
+          linkElement.href        = mapsLink;
+          linkElement.target      = '_blank';
+          linkElement.textContent = `View on Google Maps: ${address}`;
+    
     return linkElement;
   }
 
@@ -39,7 +37,7 @@ function Shows({ shows, setShows }) {
       {shows &&
         shows.map((show, index) => {
           return (
-            <>
+            
               <div className="m-4 text-lg bg bg-[#0C0C0C] md:pt-10 md:pb-4 md:px-10 p-6 rounded-md" key={index}>
                 <a className="text-3xl" href={show.venue_website}>
                   <h3 className="text-blue-300 mb-4 `">{show.title}</h3>
@@ -47,40 +45,33 @@ function Shows({ shows, setShows }) {
                 {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 {show.media && (
                   <img
-                  height={300}
-                  width={400}
+                    height    = {300}
+                    width     = {400}
                     className = "m-1 mx-auto mb-4 rounded-md md:aspect-square"
                     src       = {show.media}
                     alt       = "show"
                   />
                 )}
                 <div className="md:p-4 p-2">
-                {show.description && (
-                  <div className="m-1">{show.description}</div>
-                )}
-                {show.date && (
-                  <div className="mt-2 mb-2">{convertDate(show.date)}</div>
-                )}
-                {show.time_start ? (
-                  <div className="mt-2 mb-4 font-bold">
-                    {convertTime(show.time_start) +
-                      " - " +
-                      convertTime(show.time_end)}
-                  </div>
-                ) :
-                <div>Time: <span className="font-bold">TBA</span></div>}
-                {show.address &&
-                  show.address.split(".").map((addr, index) => {
+                  {show.description && <div className="m-1">{show.description}</div>}
+                  {show.date &&<div className="mt-2 mb-2">{convertDate(show.date)}</div>}
+                  {show.time_start ? (
+                    <div className="mt-2 mb-4 font-bold">
+                      {convertTime(show.time_start) + " - " + convertTime(show.time_end)}
+                    </div>
+                  ) : (
+                    <div>Time: <span className="font-bold">TBA</span></div>
+                  )}
+                  {show.address && show.address.split(".").map((addr, index) => {
                     return (
                       <div className="m-2" key={index}>
-                        <a style={{borderBottom: "1px solid white"}} href={createGoogleMapsLink(show.address)}>{addr}</a>
+                        <a className="hover:text-blue-400" style={{borderBottom: "1px solid white"}} href={createGoogleMapsLink(show.address)}>{addr}</a>
                       </div>
-                    );
-                  })}
+                      );
+                    })}
+                </div>
               </div>
-              </div>
-              
-            </>
+          
           );
         })}
     </div>

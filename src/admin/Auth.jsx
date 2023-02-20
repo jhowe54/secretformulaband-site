@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { BiCircle } from "react-icons/bi";
 import { FaSpinner } from "react-icons/fa";
 import { supabase } from "../api/client";
+
 export default function Auth() {
   const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState("");
@@ -13,7 +14,6 @@ export default function Auth() {
     try {
       setLoading(true);
       const { data, error } = await supabase.from("silly").select("id").eq("captain", password)
-      console.log("DATA", data)
       if (error) {
         console.log(error)
         throw error

@@ -82,11 +82,11 @@ function App() {
         <h2 className="text-4xl my-4">Book a show</h2>
         <button
           onClick={() => navigate("/bookings")}
-          className="bg p-2 my-6 rounded-lg bg-blue-400  hover:bg-white hover:text-blue-400"
+          className="bg p-2 my-6 md:w-[30%] w-[50%] rounded-lg bg-blue-400  hover:bg-white hover:text-blue-400"
         >
           Book Now
         </button>
-        <p className="mb-6">OR</p>
+        <p className="mb-6">or</p>
         <p className="">
           Send us an email at:{" "}
           <a

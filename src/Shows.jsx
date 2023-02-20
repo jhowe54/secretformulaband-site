@@ -25,6 +25,14 @@ function Shows({ shows, setShows }) {
     const estTime = inputDate.toLocaleString("en-US", options);
     return estTime;
   }
+  function createGoogleMapsLink(address) {
+    const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    const linkElement = document.createElement('a');
+    linkElement.href = mapsLink;
+    linkElement.target = '_blank';
+    linkElement.textContent = `View on Google Maps: ${address}`;
+    return linkElement;
+  }
 
   return (
     <div className="grid md:grid-cols-2 grid-cols-1">
@@ -32,7 +40,7 @@ function Shows({ shows, setShows }) {
         shows.map((show, index) => {
           return (
             <>
-              <div className="m-4 bg bg-[#0C0C0C] p-10 rounded-md" key={index}>
+              <div className="m-4 bg bg-[#0C0C0C] md:p-10 p-6 rounded-md" key={index}>
                 <a className="text-3xl" href={show.venue_website}>
                   <h3 className="text-blue-300 mb-4 `">{show.title}</h3>
                 </a>
@@ -51,18 +59,19 @@ function Shows({ shows, setShows }) {
                 {show.date && (
                   <div className="m-2">{convertDate(show.date)}</div>
                 )}
-                {show.time_start && (
+                {show.time_start ? (
                   <div className="mt-2 mb-4 font-bold">
                     {convertTime(show.time_start) +
                       " - " +
                       convertTime(show.time_end)}
                   </div>
-                )}
+                ) :
+                <div>Time: <span className="font-bold">TBA</span></div>}
                 {show.address &&
-                  show.address.split(".").map((address, index) => {
+                  show.address.split(".").map((addr, index) => {
                     return (
                       <div className="m-2" key={index}>
-                        {address}
+                        <a style={{borderBottom: "1px solid white"}} href={createGoogleMapsLink(show.address)}>{addr}</a>
                       </div>
                     );
                   })}

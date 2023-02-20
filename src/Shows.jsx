@@ -40,24 +40,26 @@ function Shows({ shows, setShows }) {
         shows.map((show, index) => {
           return (
             <>
-              <div className="m-4 bg bg-[#0C0C0C] md:p-10 p-6 rounded-md" key={index}>
+              <div className="m-4 text-lg bg bg-[#0C0C0C] md:pt-10 md:pb-4 md:px-10 p-6 rounded-md" key={index}>
                 <a className="text-3xl" href={show.venue_website}>
                   <h3 className="text-blue-300 mb-4 `">{show.title}</h3>
                 </a>
                 {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 {show.media && (
                   <img
-                   
+                  height={300}
+                  width={400}
                     className = "m-1 mx-auto mb-4 rounded-md md:aspect-square"
                     src       = {show.media}
                     alt       = "show"
                   />
                 )}
+                <div className="md:p-4 p-2">
                 {show.description && (
                   <div className="m-1">{show.description}</div>
                 )}
                 {show.date && (
-                  <div className="m-2">{convertDate(show.date)}</div>
+                  <div className="mt-2 mb-2">{convertDate(show.date)}</div>
                 )}
                 {show.time_start ? (
                   <div className="mt-2 mb-4 font-bold">
@@ -75,6 +77,7 @@ function Shows({ shows, setShows }) {
                       </div>
                     );
                   })}
+              </div>
               </div>
               
             </>

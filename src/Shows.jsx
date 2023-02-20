@@ -27,7 +27,7 @@ function Shows({ shows, setShows }) {
   }
 
   return (
-    <>
+    <div className="grid md:grid-cols-2 grid-cols-1">
       {shows &&
         shows.map((show, index) => {
           return (
@@ -39,9 +39,8 @@ function Shows({ shows, setShows }) {
                 {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 {show.media && (
                   <img
-                    height    = {300}
-                    width     = {300}
-                    className = "m-1 mx-auto mb-4 rounded-md"
+                   
+                    className = "m-1 mx-auto mb-4 rounded-md md:aspect-square"
                     src       = {show.media}
                     alt       = "show"
                   />
@@ -68,11 +67,11 @@ function Shows({ shows, setShows }) {
                     );
                   })}
               </div>
-              <span>-</span>
+              
             </>
           );
         })}
-    </>
+    </div>
   );
 }
 

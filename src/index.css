@@ -8,6 +8,9 @@ html {
   scrollbar-color: red;
 }
 
+#card {
+ box-shadow: inset 2px 2px 8px 7px rgba(0, 0, 0, 0.404);
+}
 ::-webkit-scrollbar {
   width: 8px;
 }

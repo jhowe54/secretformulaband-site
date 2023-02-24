@@ -38,7 +38,7 @@ function Shows({ shows, setShows }) {
         shows.map((show, index) => {
           return (
             
-              <div className="m-4 text-lg bg bg-[#0C0C0C] md:pt-10 md:pb-4 md:px-10 p-6 rounded-md" key={index}>
+              <div id="card" className="m-4 text-lg bg bg-[#0C0C0C] md:pt-10 md:pb-4 md:px-10 p-6 rounded-md" key={index}>
                 <a className="text-3xl" href={show.venue_website}>
                   <h3 className="text-blue-300 mb-4 `">{show.title}</h3>
                 </a>

@@ -23,6 +23,7 @@ async function loadSchedule() {
   const {data} = await supabase
   .from('shows')
   .select('*')
+  .order('date', {ascending: true})
   return data;
   
 }

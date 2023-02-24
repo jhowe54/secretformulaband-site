@@ -181,7 +181,7 @@ nav {
 
 @media (prefers-reduced-motion: no-preference) {
   #insta-icon:hover {
-    animation: insta-icon-spin 2 0.4s linear;
+    animation: insta-icon-spin 1 0.3s ease-in-out;
   }
 }
 

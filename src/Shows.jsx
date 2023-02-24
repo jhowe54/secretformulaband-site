@@ -62,13 +62,15 @@ function Shows({ shows, setShows }) {
                   ) : (
                     <div>Time: <span className="font-bold">TBA</span></div>
                   )}
+                  <div  className="hover:text-blue-400">
                   {show.address && show.address.split(".").map((addr, index) => {
                     return (
                       <div className="m-2" key={index}>
-                        <a className="hover:text-blue-400" style={{borderBottom: "1px solid white"}} href={createGoogleMapsLink(show.address)}>{addr}</a>
+                        <a className="" style={{borderBottom: "1px solid white"}} href={createGoogleMapsLink(show.address)}>{addr}</a>
                       </div>
                       );
                     })}
+                    </div>
                 </div>
               </div>
           

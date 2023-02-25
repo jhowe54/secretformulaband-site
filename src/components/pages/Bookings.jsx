@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {useNavigate } from "react-router";
-import { postBookingDetails} from "./api/api";
-
+import { postBookingDetails} from "../../api/api";
+import { classNames } from "../../utils/classNames";
 function Bookings() {
     const navigate = useNavigate();
 
@@ -27,11 +27,8 @@ function Bookings() {
 
     const [bookingDetails, setBookingDetails] = useState(initialFormState)
 
-    const classNames = {
-        input : "rounded-md  placeholder-[#ffffff81] mb-4 mx- p-2 md:w-2/3 w-full bg-[#1a1a1a]",
-        submit: "rounded-md  placeholder-[#ffffff81] my-4 mx-2 p-2 md:w-2/3 w-full bg-blue-400"
-    }
-
+ 
+    
     const  handleSubmit = async (e) => {
         e.preventDefault()
         await postBookingDetails(bookingDetails)
@@ -167,7 +164,7 @@ function Bookings() {
             placeholder = "Any additional information?"
             className   = {classNames.input}
           />
-          <button type="submit" className={classNames.submit}>
+          <button type="submit" className='text-xl bg p-2 my-6 md:w-[30%] w-[50%] rounded-lg hover:scale-110 duration-500 bg-blue-400  hover:bg-white hover:text-blue-400'>
             Submit
           </button>
         </form>

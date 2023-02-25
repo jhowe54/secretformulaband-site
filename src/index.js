@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Bookings from "./Bookings";
-import NavBar from "./NavBar";
+import Bookings from "./components/pages/Bookings";
+import NavBar from "./components/global/NavBar";
 import AdminScreen from "./admin/AdminScreen";
-import Submitted from "./Submitted";
+import Submitted from "./components/utility/Submitted";
 
 import {
   BrowserRouter,

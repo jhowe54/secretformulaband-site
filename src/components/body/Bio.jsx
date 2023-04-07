@@ -5,7 +5,7 @@ function Bio() {
     <>
       <img
         src={outsidepic2}
-        className="lg:w-1/2 w-full xl:p-0  rounded-md my-8 box-content grayscale contrast-[1.4]"
+        className="xl:w-1/2 lg:w-2/3 md:w-4/5 w-full xl:p-0  rounded-md my-8 box-content grayscale contrast-[1.4]"
         alt="Band Pic"
       />
       <p id="bio-1" className=" lg:px-60 md:px-10 px-4 py-4 lg:text-xl">

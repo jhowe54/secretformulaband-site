@@ -1,11 +1,11 @@
 import { convertDate, convertTime, createGoogleMapsLink } from "../../utils/utilityFunctions";
 
 
-function Show({show, isPast}) {
+function Show({show}) {
     return (
-        <div id="card" className="m-4 text-lg bg bg-[#0C0C0C] md:pt-10 md:pb-4 md:px-10 p-6 rounded-md">
+        <div id="card" className="m-4 text-lg bg bg-[#0C0C0C] md:pt-6 md:pb-4 md:px-10 p-6 rounded-md">
                 <a className="text-4xl" href={show.venue_website}>
-                  <h3 className="text-blue-300 mb-4 `">{show.title}</h3>
+                  <h3 className="text-bold mb-4 `">{show.title}</h3>
                 </a>
                 {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 {show.media && (
@@ -24,7 +24,7 @@ function Show({show, isPast}) {
                   {show.date && (
                     <div className="mt-2 mb-2">{convertDate(show.date)}</div>
                   )}
-                  {!isPast && show.time_start && (
+                  {show.time_start && (
                     <div className=" font-bold">
                       {convertTime(show.time_start) +
                         " - " +
@@ -32,7 +32,7 @@ function Show({show, isPast}) {
                     </div>
                   )}
                   <div className="hover:text-blue-400">
-                    {!isPast && show.address &&
+                    { show.address &&
                       show.address.split(".").map((addr, index) => {
                         return (
                           <div className="" key={index}>

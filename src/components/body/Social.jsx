@@ -8,7 +8,7 @@ function Social() {
       <h2 id="social" className="text-5xl my-2">
         Social Media
       </h2>
-      <div className="flex md:flex-row md:wrap-none flex-col justify-center md:gap-12 gap-6 md:p-12 p-6">
+      <div className="flex md:flex-row md:wrap-none justify-center md:gap-12 gap-6 md:p-12 p-6">
         <div className=" flex flex-col items-center">
           <a id="insta" href="https://www.instagram.com/secretformulaband/" target="_blank" rel="noreferrer">
             <FaInstagram id="insta-icon" size={70} />

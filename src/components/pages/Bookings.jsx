@@ -14,8 +14,8 @@ function Bookings() {
     }
 
     const initialFormState = {
-        firstName: "",
-        lastName : "",
+        
+        name: " ",
         address  : "",
         email    : "",
         phone    : "",
@@ -36,7 +36,7 @@ function Bookings() {
     }
 
     return (
-      <div className="bg-transparent  ">
+      <div className="bg-transparent   ">
         <h1 className="text-white w-full mx-auto text-center text-6xl md:mt-6 m-2 mb-8">
           Secret Formula Band
         </h1>
@@ -46,12 +46,14 @@ function Bookings() {
         <form
           onSubmit={handleSubmit}
           id="booking-form-outer"
-          className="rounded-xl md:w-2/3 w-[90%] md:mt-[5%] mt-[10%] mb-12 p-12  mx-auto text-white flex flex-col justify-start  content-start"
+          className="rounded-xl md:w-2/3 w-[90%] md:mt-[5%] mt-[10%] mb-24 p-12  mx-auto text-white flex flex-col items-center justify-center"
         >
-          <p className="rounded-md  placeholder-[#ffffff81] mb-4 md:min-w-min">
+          <p className="rounded-md flex-1  placeholder-[#ffffff81] mb-4 md:min-w-min">
             Please fill out the form below. We'll be in touch soon!
           </p>
-          <label className="block m-2" htmlFor="date">
+          <div className="grid md:grid-cols-2 md:grid-rows-none grid-rows-2 w-full ">
+            <div className="col col-span-1 flex flex-col justify-start md:items-center items-start ">
+            <label className="block m-1" htmlFor="date">
             Requested Date:
           </label>
           <input
@@ -63,7 +65,7 @@ function Bookings() {
             
             className={classNames.input}
           />
-          <label className="block m-2" htmlFor="time">
+          <label className="block m-1" htmlFor="time">
             Requested Time:
           </label>
           <input
@@ -75,7 +77,7 @@ function Bookings() {
             
             className={classNames.input}
           />
-          <label className="block m-2" htmlFor="duration">
+          <label className="block m-1" htmlFor="duration">
             Duration:
           </label>
           <select
@@ -95,7 +97,7 @@ function Bookings() {
             <option value={2.5}>2.5 hrs</option>
             <option value={3}>3 hrs</option>
           </select>
-          <label className="block m-2" htmlFor="location">
+          <label className="block m-1" htmlFor="location">
             Venue Address:
           </label>
           <input
@@ -105,30 +107,22 @@ function Bookings() {
             name      = "address"
             id        = "address"
             className = {classNames.input}
+            placeholder=""
           />
-          <label className="block m-2" htmlFor="firstName">
-            First Name:
+            </div>
+          <div className="col col-span-1 flex flex-col justify-start md:items-center items-start">
+          <label className="block m-1" htmlFor="name">
+            Name:
           </label>
           <input
             onChange  = {handleChange}
-            value     = {bookingDetails.firstName}
+            value     = {bookingDetails.name}
             type      = "text"
-            name      = "firstName"
-            id        = "firstName"
+            name      = "name"
+            id        = "name"
             className = {classNames.input}
           />
-          <label className="block m-2" htmlFor="lastName">
-            Last Name:
-          </label>
-          <input
-            onChange  = {handleChange}
-            value     = {bookingDetails.lastName}
-            type      = "text"
-            name      = "lastName"
-            id        = "lastName"
-            className = {classNames.input}
-          />
-          <label className="block m-2" htmlFor="phone">
+          <label className="block m-1" htmlFor="phone">
             Phone Number:
           </label>
           <input
@@ -140,7 +134,7 @@ function Bookings() {
             required
             className={classNames.input}
           />
-          <label className="block m-2" htmlFor="email">
+          <label className="block m-1" htmlFor="email">
             Email address:
           </label>
           <input
@@ -152,7 +146,7 @@ function Bookings() {
             required
             className={classNames.input}
           />
-          <label className="block m-2" htmlFor="notes">
+          <label className="block m-1" htmlFor="notes">
             Notes:
           </label>
           <textarea
@@ -164,9 +158,13 @@ function Bookings() {
             placeholder = "Any additional information?"
             className   = {classNames.input}
           />
+          </div>
+         
+          </div>
           <button type="submit" className='text-xl bg p-2 my-6 md:w-[30%] w-[50%] rounded-lg hover:scale-110 duration-500 bg-blue-400  hover:bg-white hover:text-blue-400'>
             Submit
           </button>
+          
         </form>
       </div>
     );

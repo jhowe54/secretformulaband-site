@@ -8,7 +8,10 @@ function Bio() {
         alt="Band Pic"
       />
       <p id="bio-1" className=" lg:px-60 md:px-10 px-4 py-4 lg:text-xl">
-        The <span className="lg:text-2xl text-lg text-blue-300">Secret Formula Band</span>{" "}
+        The{" "}
+        <span className="lg:text-2xl text-lg font-bold">
+          Secret Formula Band
+        </span>{" "}
         is a Southern rock group out of Charlotte, North Carolina that has been
         together since February 2022. The group brings a rugged, soulful noise
         to the stage that sounds as good as Miller Lite tastes. Drawing
@@ -18,11 +21,11 @@ function Bio() {
         southern flair.
       </p>
       <p id="bio-2" className="lg:px-60 md:px-10 px-4 py-4 lg:text-xl">
-        Mac McArtor [vocals, keys], Andrew Miramon [guitar, vocals], Alex Weir
-        [guitar, mandolin, vocals], David Kirkpatrick [bass], and Joseph Howe
+        <span className="font-bold">Mac McArtor</span> [vocals, keys], <span className="font-bold">Andrew Miramon</span>{" "}
+        [guitar, vocals], <span className="font-bold">Alex Weir</span> [guitar, mandolin, vocals],{" "}
+        <span className="font-bold">David Kirkpatrick</span> [bass], and <span className="font-bold">Joseph Howe</span>{" "}
         [drums] make up the 5-piece machine that is Secret Formula Band as we
-        know it today, with original members David Gardener, Ashby Wickham, and
-        Matt Ziegelstein frequently coming home to jam with the Formulads.
+        know it today.
       </p>
     </>
   );

@@ -110,14 +110,14 @@ nav {
 }
 
 #acc-img-1 {
-  background-image: url("../public//media/IMG_1200.JPG");
+  background-image: url("../public/media/IMG_1200.JPG");
   background-position: 48% 25%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #acc-img-2 {
-  background-image: url("../public/media/IMG_1218.JPG");
-  background-position: 80% 60%;
+  background-image: url("../public/media/IMG_1207.jpeg");
+  background-position: 48% 25%; ;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -148,14 +148,14 @@ nav {
 }
 
 #bio-1 {
-  text-indent: 10px;
+  text-indent: 12px;
   line-height: 30px;
   letter-spacing: 1.5px;
   margin-top: 10px;
 }
 
 #bio-2 {
-  text-indent: 10px;
+  
   line-height: 30px;
   letter-spacing: 1.5px;
   margin-bottom: 10px;

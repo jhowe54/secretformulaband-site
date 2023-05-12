@@ -5,7 +5,10 @@ function Show({show}) {
     return (
         <div id="card" className="m-4 text-lg bg bg-[#0C0C0C] md:pt-6 md:pb-4 md:px-10 p-6 rounded-md">
                 <a className="text-4xl" href={show.venue_website}>
-                  <h3 className="text-bold mb-4 `">{show.title}</h3>
+                  <h3 className="text-bold mb-2">{show.title}</h3>
+                  {show.description && (
+                    <div className="text-lg mb-2">{show.description}</div>
+                  )}
                 </a>
                 {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 {show.media && (
@@ -18,9 +21,7 @@ function Show({show}) {
                   />
                 )}
                 <div className="md:p-4 p-2">
-                  {show.description && (
-                    <div className="m-1">{show.description}</div>
-                  )}
+                  
                   {show.date && (
                     <div className="mt-2 mb-2">{convertDate(show.date)}</div>
                   )}

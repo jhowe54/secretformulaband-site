@@ -7,16 +7,15 @@ export function convertDate(dateString) {
   }
 
   export function convertTime(inputTime) {
-    const now       = new Date();
-    const inputDate = new Date(now.toDateString() + " " + inputTime);
-
+    const inputDate = new Date(`1970-01-01T${inputTime}-05:00`);
+  
     const options = {
-      timeZone: "America/New_York",
-      hour12  : true,
-      hour    : "numeric",
-      minute  : "numeric",
+      hour12: true,
+      hour: "numeric",
+      minute: "numeric",
+      timeZone: "America/New_York"
     };
-
+  
     const estTime = inputDate.toLocaleString("en-US", options);
     return estTime;
   }

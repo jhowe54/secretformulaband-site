@@ -20,7 +20,6 @@ function App() {
         setPastShows(data.filter((show) => {
           let currentDate = new Date();
           let dateToCompare = new Date(show.date);
-          console.log(currentDate, dateToCompare)
           return currentDate > dateToCompare;
       }).sort((a, b) => new Date(a.date) - new Date(b.date)))
 

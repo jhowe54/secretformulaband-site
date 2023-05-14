@@ -4,9 +4,8 @@ import "./index.css";
 import App from "./App";
 import Bookings from "./components/pages/Bookings";
 import NavBar from "./components/global/NavBar";
-import AdminScreen from "./admin/AdminScreen";
 import Submitted from "./components/utility/Submitted";
-
+import NotFound from "./components/errors/NotFound";
 import {
   BrowserRouter,
   Route,
@@ -23,7 +22,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route exact path="/bookings" element={<Bookings />} />
       <Route path="/submitted" element={<Submitted />} />
-      <Route private exact path="/admin" element={<AdminScreen />} />
+      <Route path='*' element={<NotFound />}/>
     </Routes>
   </BrowserRouter>
 );

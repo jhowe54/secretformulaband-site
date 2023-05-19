@@ -26,7 +26,7 @@ function App() {
         setShows(data.filter((show) => {
           let currentDate = new Date();
           let dateToCompare = new Date(show.date);
-          console.log("currentDate", currentDate, "dateToCompare", dateToCompare)
+          console.log("currentDate", currentDate, "dateToCompare", dateToCompare, show.title)
           return currentDate < dateToCompare;
         }).sort((a, b) => new Date(a.date) - new Date(b.date)));
       } catch (error) {

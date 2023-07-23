@@ -37,9 +37,6 @@ function Bookings() {
 
     return (
       <div className="bg-transparent   ">
-        <h1 className="text-white w-full mx-auto text-center text-6xl md:mt-6 m-2 mb-8">
-          Secret Formula Band
-        </h1>
         <h2 className="text-white mx-auto text-center text-2xl md:mt-6 my-4 w-1/3">
           Book Now
         </h2>

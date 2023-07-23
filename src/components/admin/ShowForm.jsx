@@ -21,7 +21,7 @@ function ShowForm({ setFormState, handleSubmit, formState, handleDelete }) {
         <div className="grid md:grid-cols-2 md:grid-rows-none grid-rows-2 w-full ">
           <div className="col col-span-1 flex flex-col justify-start md:items-center items-start ">
             <label className="block m-1" htmlFor="title">
-              Title of Show
+              Title/Name of Show
             </label>
             <input
               onChange={handleChange}

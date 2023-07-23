@@ -37,13 +37,13 @@ function EditShows() {
       }
     }
     loadShows();
-    console.log("shows", shows);
+    console.log("selectedShow", selectedShow);
     return () => abortController.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedShow]);
+  }, []);
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+
     const { data, error } = await supabase
       .from('shows')
       .update({
@@ -57,14 +57,10 @@ function EditShows() {
       })
       .eq('id', Number(selectedShow.id))
       .select();
-      setSelectedShow(null)
-
-
-    console.log(JSON.stringify(data));
   };
 
   const handleShowSelection = (e, show) => {
-    myRef.current.scrollIntoView({ behavior: 'smooth' });
+    e.preventDefault()
     setSelectedShow(show);
    
     setFormState({
@@ -101,7 +97,7 @@ function EditShows() {
             <div
               key={show.id}
               onClick={(e) => handleShowSelection(e, show)}
-              className="flex justify-between border rounded-md md:mb-4 my-2 mx-auto hover:bg-blue-400 cursor-pointer min-w-[350px]"
+              className="flex justify-between border rounded-md md:mb-4 my-2 mx-auto cursor-pointer min-w-[350px]"
               style={
                 selectedShow === show
                   ? { backgroundColor: "rgb(96 165 250)" }

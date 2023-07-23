@@ -34,6 +34,7 @@ function NavBar() {
             >
               Bookings
             </Link>
+           
           </div>
         </div>
       </nav>

@@ -16,6 +16,7 @@ import {
 } from "react-router-dom";
 import { inject } from "@vercel/analytics";
 import EditShows from "./components/admin/EditShows";
+import Epk from "./components/pages/Epk";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -28,9 +29,8 @@ root.render(
       <Route exact path="/bookings" element={<Bookings />} />
       <Route path="/submitted" element={<Submitted />} />
       <Route path="/media" element={<Media />} />
-      <Route path='admin/shows/edit' element={<EditShows/>}/>
-      <Route path='admin/shows/add' element={<AddShows />}/>
-      <Route path='admin' element={<Login/>}/>
+      <Route path='/epk' element={<Epk />}/>
+      <Route path='/admin' element={<Login/>}/>
       
       <Route path='*' element={<NotFound />}/>
     </Routes>

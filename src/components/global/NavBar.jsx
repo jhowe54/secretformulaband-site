@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
+  const [sidebarIsExpanded, setSidebarIsExpanded] = useState(false);
+
   return (
     <header className="w-full mx-auto">
       <nav id="navbar" className="w-full">
@@ -10,13 +12,14 @@ function NavBar() {
             <Link to={"/"} title="Home" className="md:p-4 p-2">
               Home
             </Link>
+            {/*
             <a
-              href={"/#media"}
+              href={"/media"}
               title="View our photos and videos"
               className="md:p-4 p-2"
             >
               Media
-            </a>
+  </a> */}
             <a
               href={"/#shows"}
               title="See our upcoming shows"

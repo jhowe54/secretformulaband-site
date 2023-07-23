@@ -7,6 +7,7 @@ import Social  from "./components/body/Social";
 import Shows   from "./components/body/Shows";
 import Bio     from "./components/body/Bio";
 import PastShows from "./components/body/PastShows";
+import { filterNewShows, filterOldShows } from "./utils/utilityFunctions";
 
 function App() {
   const [shows, setShows] = useState([]);
@@ -17,17 +18,10 @@ function App() {
     async function loadShows() {
       try {
         const data = await loadSchedule();
-        setPastShows(data.filter((show) => {
-          let currentDate = new Date();
-          let dateToCompare = new Date(show.date);
-          return currentDate > dateToCompare;
-      }).sort((a, b) => new Date(b.date) - new Date(a.date)))
-
-        setShows(data.filter((show) => {
-          let currentDate = new Date();
-          let dateToCompare = new Date(show.date);
-          return currentDate < dateToCompare;
-        }).sort((a, b) => new Date(a.date) - new Date(b.date)));
+        const newShows = filterNewShows(data)
+        const prevShows = filterOldShows(data)
+        setPastShows(prevShows)
+        setShows(newShows);
       } catch (error) {
         if (error.name !== "AbortError") throw error;
         else console.log("Aborted");

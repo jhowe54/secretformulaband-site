@@ -3,25 +3,25 @@ import { convertDate, convertTime, createGoogleMapsLink } from "../../utils/util
 
 function Show({show}) {
     return (
-        <div id="card" className="m-4 text-lg bg bg-[#0C0C0C] md:pt-6 md:pb-4 md:px-10 p-6 rounded-md">
-                <a className="text-4xl" href={show.venue_website}>
-                  <h3 className="text-bold mb-2">{show.title}</h3>
-                  {show.description && (
-                    <div className="text-lg mb-2">{show.description}</div>
-                  )}
+        <div id="card" className="m-4 text-lg bg bg-[#0C0C0C] p-4 rounded-md text-center">
+                <a className="text-3xl" href={show.venue_website}>
+                  <h3 className="text-bold my-2 min-h-[70px]">{show.title}</h3>
+                  
                 </a>
                 {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 {show.media && (
                   <img
                     height={300}
-                    width={400}
-                    className="m-1 mx-auto mb-4 rounded-md md:aspect-square"
+                    width={300}
+                    className="m-1 mx-auto mb-4 rounded-md h-[400px]"
                     src={show.media}
                     alt="show"
                   />
                 )}
                 <div className="md:p-4 p-2">
-                  
+                {show.description && (
+                    <div className="text-lg mb-2">{show.description}</div>
+                  )}
                   {show.date && (
                     <div className="mt-2 mb-2">{convertDate(show.date)}</div>
                   )}

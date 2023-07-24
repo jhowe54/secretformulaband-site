@@ -17,12 +17,12 @@ function Epk() {
 
         <div className="my-4 flex flex-col p-4">
           <div className="mb-[20px]">
-            <h2 className="font-bold">Preferred Artist Short Bio:</h2>
+            <h2 className="font-bold">Short Bio:</h2>
             <p>Southern Rock. Hail the snail.</p>
           </div>
 
           <div className="mb-[20px]">
-            <h2 className="font-bold">Preferred Artist Medium Bio:</h2>
+            <h2 className="font-bold">Medium Bio:</h2>
             <p>
               Riding a new wave of southern rock into the heart of the
               Carolinas, Secret Formula Band delivers a rugged, soulful noise to
@@ -36,7 +36,7 @@ function Epk() {
           </div>
 
           <div className="mb-[20px]">
-            <h2 className="font-bold">Preferred Artist Long Bio:</h2>
+            <h2 className="font-bold">Long Bio:</h2>
             <p>
               Riding a new wave of southern rock into the heart of the
               Carolinas, Secret Formula Band delivers a rugged, soulful noise to
@@ -51,7 +51,6 @@ function Epk() {
           </div>
 
           <div className="mb-[20px]">
-            <h2 className="font-bold">Band Members:</h2>
             <p>
               Mac McArtor [vocals, keys], Andrew Miramon [guitars, vocals], Alex
               Weir [guitar, mandolin, vocals], David Kirkpatrick [bass], and
@@ -98,6 +97,14 @@ function Epk() {
               </div>
             </li>
           </ul>
+        </div>
+        <div className="my-4 flex flex-col p-4 ">
+          <img
+            className="mx-auto"
+            width={600}
+            src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/outsideBandpic.jpeg"
+            alt="Band Pic"
+          />
         </div>
         
       </div>

@@ -8,15 +8,16 @@ import Submitted from "./components/utility/Submitted";
 import NotFound from "./components/errors/NotFound";
 import Media from "./components/pages/Media"
 import Login from "./components/admin/Login";
-import AddShows from "./components/admin/AddShows";
+
 import {
   BrowserRouter,
   Route,
   Routes,
 } from "react-router-dom";
 import { inject } from "@vercel/analytics";
-import EditShows from "./components/admin/EditShows";
+
 import Epk from "./components/pages/Epk";
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -31,7 +32,6 @@ root.render(
       <Route path="/media" element={<Media />} />
       <Route path='/epk' element={<Epk />}/>
       <Route path='/admin' element={<Login/>}/>
-      
       <Route path='*' element={<NotFound />}/>
     </Routes>
   </BrowserRouter>

@@ -18,7 +18,7 @@ function Epk() {
           <img
             className="mx-auto"
             width={600}
-            src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/outsideBandpic.jpeg"
+            src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/backyardpic.png?t=2023-07-24T00%3A43%3A47.643Z"
             alt="Band Pic"
           />
         </div>
@@ -28,23 +28,8 @@ function Epk() {
             <h2 className="font-bold">Short Bio:</h2>
             <p>Southern Rock. Hail the snail.</p>
           </div>
-
           <div className="mb-[20px]">
-            <h2 className="font-bold">Medium Bio:</h2>
-            <p>
-              Riding a new wave of southern rock into the heart of the
-              Carolinas, Secret Formula Band delivers a rugged, soulful noise to
-              the stage that gets the people going. The 5-piece band bottles up
-              their sound in their first two released singles: The high-octane
-              rock track, “Cajun Queen”, displays the brazen energy that the
-              band carries, while the soulful blues number, “Get Your Lovin”,
-              embodies the group’s ability to flip the switch in a moment's
-              notice. Come hear SFB and enjoy the ride.
-            </p>
-          </div>
-
-          <div className="mb-[20px]">
-            <h2 className="font-bold">Long Bio:</h2>
+            <h2 className="font-bold">Full Bio:</h2>
             <p>
               Riding a new wave of southern rock into the heart of the
               Carolinas, Secret Formula Band delivers a rugged, soulful noise to

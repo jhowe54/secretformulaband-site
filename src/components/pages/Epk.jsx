@@ -17,7 +17,7 @@ function Epk() {
         <div className="my-4 flex flex-col p-4 ">
           <img
             className="mx-auto"
-            width={600}
+            width={800}
             src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/backyardpic.png?t=2023-07-24T00%3A43%3A47.643Z"
             alt="Band Pic"
           />
@@ -54,8 +54,8 @@ function Epk() {
         </div>
         <div className="my-4 flex flex-col p-4 ">
           <img
-            className="mx-auto scale-125"
-            width={600}
+            className="mx-auto"
+            width={800}
             src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/visulitebackv3.jpg?t=2023-07-24T00%3A41%3A34.884Z"
             alt="Band Pic"
           />

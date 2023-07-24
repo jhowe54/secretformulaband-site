@@ -14,6 +14,14 @@ function Epk() {
             allowFullScreen
           ></iframe>
         </div>
+        <div className="my-4 flex flex-col p-4 ">
+          <img
+            className="mx-auto"
+            width={600}
+            src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/outsideBandpic.jpeg"
+            alt="Band Pic"
+          />
+        </div>
 
         <div className="my-4 flex flex-col p-4">
           <div className="mb-[20px]">
@@ -61,9 +69,9 @@ function Epk() {
         </div>
         <div className="my-4 flex flex-col p-4 ">
           <img
-            className="mx-auto"
+            className="mx-auto scale-125"
             width={600}
-            src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/sign/images/visuliteback.JPG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvdmlzdWxpdGViYWNrLkpQRyIsImlhdCI6MTY5MDEzNjkzOCwiZXhwIjoxNzIxNjcyOTM4fQ.dFdSLNhQGkAsLEDxwT5pTaQmG8CKOJEBeiHqJhtX90g&t=2023-07-23T18%3A28%3A55.784Z"
+            src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/visulitebackv3.jpg?t=2023-07-24T00%3A41%3A34.884Z"
             alt="Band Pic"
           />
         </div>
@@ -98,14 +106,7 @@ function Epk() {
             </li>
           </ul>
         </div>
-        <div className="my-4 flex flex-col p-4 ">
-          <img
-            className="mx-auto"
-            width={600}
-            src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/outsideBandpic.jpeg"
-            alt="Band Pic"
-          />
-        </div>
+        
         
       </div>
     </div>

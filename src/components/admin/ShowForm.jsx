@@ -18,8 +18,8 @@ function ShowForm({ setFormState, handleSubmit, formState, handleDelete }) {
         id="show-form"
         className="rounded-xl md:w-2/3 w-[90%] md:mt-[5%] mt-[10%] mb-24 md:p-12 p-2  mx-auto text-white flex flex-col items-center justify-center md:border"
       >
-        <div className="grid md:grid-cols-2 md:grid-rows-none grid-rows-2 w-full ">
-          <div className="col col-span-1 flex flex-col justify-start md:items-center items-start ">
+        <div className="grid md:grid-cols-2 w-full ">
+          <div className="col col-span-1 flex flex-col md:justify-start justify-center md:items-center items-start ">
             <label className="block m-1" htmlFor="title">
               Title/Name of Show
             </label>
@@ -66,7 +66,7 @@ function ShowForm({ setFormState, handleSubmit, formState, handleDelete }) {
               className={classNames.input}
             />
           </div>
-          <div className="col col-span-1 flex flex-col justify-start md:items-center items-start">
+          <div className="col col-span-1 flex flex-col md:justify-start justify-center md:items-center items-start">
             <label className="block m-1" htmlFor="time_start">
               Time start
             </label>
@@ -104,7 +104,7 @@ function ShowForm({ setFormState, handleSubmit, formState, handleDelete }) {
             />
            
           </div>
-          <div className="w-[100%] col md:col-span-2 col-span-1 flex flex-col justify-center content-center items-center">
+          <div className="w-[100%] col md:col-span-2 col-span-1 flex flex-col md:justify-start justify-center content-center items-center">
           <label className="block mx-1" htmlFor="address">
               Address
             </label>

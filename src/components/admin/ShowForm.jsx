@@ -43,7 +43,7 @@ function ShowForm({ setFormState, handleSubmit, formState, handleDelete }) {
               className={classNames.input}
             />
             <label className="block m-1" htmlFor="media">
-              Media URL
+              Image URL <span className="block text-xs text-gray-300 italic">(3:4 aspect ratio preferred)</span>
             </label>
             <input
               onChange={handleChange}
@@ -53,6 +53,17 @@ function ShowForm({ setFormState, handleSubmit, formState, handleDelete }) {
               id="media"
               className={classNames.input}
               placeholder=""
+            />
+            <label className="block m-1" htmlFor="ticket_link">
+              Ticket URL
+            </label>
+            <input
+              onChange={handleChange}
+              value={formState.ticket_link}
+              type="url"
+              name="ticket_link"
+              id="ticket_link"
+              className={classNames.input}
             />
           </div>
           <div className="col col-span-1 flex flex-col justify-start md:items-center items-start">
@@ -101,7 +112,7 @@ function ShowForm({ setFormState, handleSubmit, formState, handleDelete }) {
             <input
               onChange={handleChange}
               value={formState.address}
-              type="daddressate"
+              type="address"
               name="address"
               id="address"
               placeholder="1504 E Worthington Ave. Charlotte, NC 28203"

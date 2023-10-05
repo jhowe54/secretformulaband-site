@@ -12,13 +12,13 @@ function EditShows() {
   const [errorMessage, setErrorMessage] = useState("");
   const myRef = useRef(null);
   const initialFormState = {
-    title      : "",
+    title: "",
     description: "",
-    date       : "",
-    media      : "",
-    address    : "",
-    time_start : "",
-    time_end   : "",
+    date: "",
+    media: "",
+    address: "",
+    time_start: "",
+    time_end: "",
     ticket_link: "",
   };
   const [formState, setFormState] = useState(initialFormState);
@@ -27,8 +27,8 @@ function EditShows() {
     const abortController = new AbortController();
     async function loadShows() {
       try {
-        const data      = await loadSchedule();
-        const newShows  = filterNewShows(data);
+        const data = await loadSchedule();
+        const newShows = filterNewShows(data);
         const prevShows = filterOldShows(data);
         setPastShows(prevShows);
         setShows(newShows);
@@ -53,8 +53,6 @@ function EditShows() {
         .eq("id", Number(selectedShow.id))
         .select();
 
-      
-
       setShowSubmitMessage(true);
       setSelectedShow(null);
     } catch (error) {
@@ -65,7 +63,7 @@ function EditShows() {
 
   const handleShowSelection = (e, show) => {
     e.preventDefault();
-    setErrorMessage(false)
+    setErrorMessage(false);
     setShowSubmitMessage(false);
     setSelectedShow(show);
     setFormState({
@@ -99,66 +97,70 @@ function EditShows() {
   };
 
   return (
-    <div className="flex flex-col items-start bg-black text-white w-full">
-      <div className=" mx-auto mt-4">
-        <p className="text-center">Upcoming shows</p>
-        {shows &&
-          shows.map((show) => {
-            return (
-              <div
-                key={show.id}
-                onClick={(e) => handleShowSelection(e, show)}
-                className="flex justify-between border rounded-md md:mb-4 my-2 mx-auto cursor-pointer min-w-[350px]"
-                style={
-                  selectedShow === show
-                    ? { backgroundColor: "rgb(96 165 250)" }
-                    : {}
-                }
-              >
-                <div className="m-2">{show.title}</div>
-                <div className="m-2">{show.date}</div>
-              </div>
-            );
-          })}
-      </div>
-      <div className=" mx-auto my-2">
-        <p className="text-center">Previous Shows</p>
-        {shows &&
-          pastShows.map((show) => {
-            return (
-              <div
-                key={show.id}
-                onClick={(e) => handleShowSelection(e, show)}
-                className="flex justify-between border rounded-md md:mb-4 my-2 mx-auto hover:bg-blue-400 cursor-pointer  min-w-[350px]"
-                style={
-                  selectedShow === show
-                    ? { backgroundColor: "rgb(96 165 250)" }
-                    : {}
-                }
-              >
-                <div className="m-2">{show.title}</div>
-                <div className="m-2">{show.date}</div>
-              </div>
-            );
-          })}
+    <div className="lg:grid lg:grid-cols-5  items-start content-center justify-items-end bg-black text-white w-full">
+      <div className="lg:col lg:col-span-2 flex flex-col ">
+        <div className="mx-auto mt-4">
+          <p className="text-center">Upcoming shows</p>
+          {shows &&
+            shows.map((show) => {
+              return (
+                <div
+                  key={show.id}
+                  onClick={(e) => handleShowSelection(e, show)}
+                  className="flex justify-between border rounded-md md:mb-4 my-2 mx-auto cursor-pointer min-w-[350px]"
+                  style={
+                    selectedShow === show
+                      ? { backgroundColor: "rgb(96 165 250)" }
+                      : {}
+                  }
+                >
+                  <div className="m-2">{show.title}</div>
+                  <div className="m-2">{show.date}</div>
+                </div>
+              );
+            })}
+        </div>
+        <div className=" mx-auto my-2">
+          <p className="text-center">Previous Shows</p>
+          {shows &&
+            pastShows.map((show) => {
+              return (
+                <div
+                  key={show.id}
+                  onClick={(e) => handleShowSelection(e, show)}
+                  className="flex justify-between border rounded-md md:mb-4 my-2 mx-auto hover:bg-blue-400 cursor-pointer  min-w-[350px]"
+                  style={
+                    selectedShow === show
+                      ? { backgroundColor: "rgb(96 165 250)" }
+                      : {}
+                  }
+                >
+                  <div className="m-2">{show.title}</div>
+                  <div className="m-2">{show.date}</div>
+                </div>
+              );
+            })}
+        </div>
+        { showSubmitMessage && (
+          <div className="mx-auto">
+            <div className="text-lg text-green-500 border border-green-500 p-4 rounded-full">
+              Submitted!
+            </div>
+          </div>
+       ) }
+        {errorMessage && (
+          <div className="mx-auto">
+            <div className="text-lg border border-red-500 p-4 rounded-full text-red-500">
+              {errorMessage}
+            </div>
+          </div>
+        )}
       </div>
 
-      {showSubmitMessage && (
-        <div className="mx-auto">
-          <div className="text-lg text-green-500 border border-green-500 p-4 rounded-full">
-            Submitted!
-          </div>
-        </div>
-      )}
-      {errorMessage && (
-        <div className="mx-auto">
-          <div className="text-lg border border-red-500 p-4 rounded-full text-red-500">
-            {errorMessage}
-          </div>
-        </div>
-      )}
-
-      <div ref={myRef} className="bg-transparent w-full min-h-[1000px]">
+      <div
+        ref={myRef}
+        className="bg-transparent w-full min-h-[1000px] col lg:col-span-3 "
+      >
         {selectedShow && (
           <ShowForm
             formState={formState}

@@ -16,7 +16,7 @@ function ShowForm({ setFormState, handleSubmit, formState, handleDelete }) {
         <form
         onSubmit={handleSubmit}
         id="show-form"
-        className="rounded-xl md:w-2/3 w-[90%] md:mt-[5%] mt-[10%] mb-24 md:p-12 p-2  mx-auto text-white flex flex-col items-center justify-center md:border"
+        className="rounded-xl md:w-2/3 w-[90%]  md:mt-[5%] mt-[10%] mb-24 md:p-12 p-2  mx-auto text-white flex flex-col items-center justify-center md:border"
       >
         <div className="grid md:grid-cols-2 w-full ">
           <div className="col col-span-1 flex flex-col md:justify-start justify-center md:items-center items-start ">

@@ -1,3 +1,4 @@
+import { DateTime } from 'luxon';
 export function convertDate(dateString) {
   const [year, month, day] = dateString.split("-");
   const months = [
@@ -44,9 +45,9 @@ export function createGoogleMapsLink(address) {
 
 export function filterOldShows(shows) {
   return shows
-    .filter((show) => {
+    .filter((show, index) => {
       let currentDate   = new Date();
-      let dateToCompare = new Date(show.date);
+      let dateToCompare = DateTime.fromISO(show.date, { zone: 'UTC' }).endOf('day');
       return currentDate > dateToCompare;
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -55,8 +56,8 @@ export function filterOldShows(shows) {
 export function filterNewShows(shows) {
   return shows
     .filter((show) => {
-      let currentDate   = new Date();
-      let dateToCompare = new Date(show.date);
+      let currentDate   = new Date()
+      let dateToCompare = DateTime.fromISO(show.date, { zone: 'UTC' }).endOf('day');
       return currentDate < dateToCompare;
     })
     .sort((a, b) => new Date(a.date) - new Date(b.date));

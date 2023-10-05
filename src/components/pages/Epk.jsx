@@ -64,10 +64,24 @@ function Epk() {
         <div className="my-4 flex flex-col p-4 ">
           <h2 className="font-bold my-2">Show Dates and People in Attendance:</h2>
           <ul className="list-disc list-outside">
+          <li>
+              <div>
+                <p>
+                  <strong>09/16/23</strong>The Pour House with Joe May & Riverdawg (105 at $10/$12)
+                </p>
+              </div>
+            </li>
+          <li>
+              <div>
+                <p>
+                  <strong>08/11/23</strong> Evening Muse with The East Wing (SOLD OUT at 120)
+                </p>
+              </div>
+            </li>
             <li>
               <div>
                 <p>
-                  <strong>5/20</strong> Crawfish for a Cause Charlotte -
+                  <strong>5/20/23</strong> Crawfish for a Cause Charlotte -
                   nonprofit event raising awareness for mental health (600+
                   admitted at $40/ticket)
                 </p>
@@ -76,7 +90,7 @@ function Epk() {
             <li>
               <div>
                 <p>
-                  <strong>4/15</strong> Evening Muse with Eden Hill (102 at
+                  <strong>4/15/23</strong> Evening Muse with Eden Hill (102 at
                   $10/$12)
                 </p>
               </div>
@@ -89,6 +103,7 @@ function Epk() {
                 </p>
               </div>
             </li>
+            
           </ul>
         </div>
         

@@ -33,22 +33,37 @@ function Epk() {
             <p>
               Riding a new wave of southern rock into the heart of the
               Carolinas, Secret Formula Band delivers a rugged, soulful noise to
-              the stage that gets the people going. The 5-piece band bottles up
-              their sound in their first two released singles: The high-octane
-              rock track, “Cajun Queen”, displays the brazen energy that the
-              band carries, while the soulful blues number, “Get Your Lovin”,
-              embodies the group’s ability to flip the switch in a moment's
-              notice. Look out for their newest single, "Goodbye Carolina",
-              releasing this August. Come hear SFB and enjoy the ride.
+              the stage for all to enjoy. This band artfully weaves a rich
+              tapestry of musical influences from their hometowns, harnessing
+              the soulful blues of Memphis, the swampy rhythms of Louisiana, the
+              rugged rock of Alabama, and the gritty storytelling of the
+              Carolinas to craft a distinctive and unforgettable sound all their
+              own.
+            </p>
+            <br />
+            <p>
+              The 5-piece band shows a dynamic range of energy and songwriting
+              in its first 3 singles, “Cajun Queen”, “Get Your Lovin’”, and
+              “Goodbye Carolina”, but all of their work has that unmistakable
+              twang that SFB wears proudly. Come hear the energized, authentic
+              experience that SFB delivers.
             </p>
           </div>
-
           <div className="mb-[20px]">
             <p>
-              Mac McArtor [vocals, keys], Andrew Miramon [guitars, vocals], Alex
-              Weir [guitar, mandolin, vocals], David Kirkpatrick [bass], and
-              Joseph Howe [drums] make up the 5-piece machine that is Secret
-              Formula Band as we know it today.
+              <span className="font-bold">Mac McArtor</span>{" "}
+              <span className="font-thin">[vocals, keys]</span>,{" "}
+              <span className="font-bold">Andrew Miramon</span>
+              <span className="font-thin"> [guitar, vocals]</span>,{" "}
+              <span className="font-bold">Alex Weir</span>
+              <span className="font-thin">
+                {" "}
+                [guitar, mandolin, vocals]
+              </span>, <span className="font-bold">David Kirkpatrick</span>
+              <span className="font-thin"> [bass]</span>, and{" "}
+              <span className="font-bold">Joseph Howe</span>{" "}
+              <span className="font-thin">[drums]</span> make up the 5-piece
+              machine that is Secret Formula Band as we know it today.
             </p>
           </div>
         </div>
@@ -62,19 +77,23 @@ function Epk() {
         </div>
 
         <div className="my-4 flex flex-col p-4 ">
-          <h2 className="font-bold my-2">Show Dates and People in Attendance:</h2>
+          <h2 className="font-bold my-2">
+            Show Dates and People in Attendance:
+          </h2>
           <ul className="list-disc list-outside">
-          <li>
+            <li>
               <div>
                 <p>
-                  <strong>09/16/23</strong>The Pour House with Joe May & Riverdawg (105 at $10/$12)
+                  <strong>09/16/23</strong>The Pour House with Joe May &
+                  Riverdawg (105 at $10/$12)
                 </p>
               </div>
             </li>
-          <li>
+            <li>
               <div>
                 <p>
-                  <strong>08/11/23</strong> Evening Muse with The East Wing (SOLD OUT at 120)
+                  <strong>08/11/23</strong> Evening Muse with The East Wing
+                  (SOLD OUT at 120)
                 </p>
               </div>
             </li>
@@ -103,11 +122,8 @@ function Epk() {
                 </p>
               </div>
             </li>
-            
           </ul>
         </div>
-        
-        
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ function NavBar() {
   return (
     <header className="w-full mx-auto">
       <nav id="navbar" className="w-full">
-        <div className="w-full md:p-6 p-2 flex flex-col md:flex-row items-center content-center justify-evenly   md:justify-between md:flex-nowrap text-lg text-white">
+        <div className="w-full md:pt-6 pt-2 flex flex-col md:flex-row items-center content-center justify-evenly   md:justify-between md:flex-nowrap text-lg text-white">
           <div className="text-xl flex flex-1 flex-row w-full  md:justify-end justify-evenly items-center">
             <Link to={"/"} title="Home" className="md:p-4 p-2">
               Home

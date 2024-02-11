@@ -36,6 +36,9 @@ function Bio() {
         <span className="font-thin">[drums]</span> make up the 5-piece machine
         that is Secret Formula Band as we know it today.
       </p>
+      <div className="video-container">
+      <iframe className="mx-auto md:w-[1024px] md:h-[576px]" src="https://www.youtube.com/embed/Jhzj35ON3Vc?si=Q-EsqFaTxhjvXNGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
     </>
   );
 }

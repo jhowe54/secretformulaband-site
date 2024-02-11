@@ -4,6 +4,9 @@ function Epk() {
       <div className=" md:p-8 lg:p-20 p-2">
         <div className="my-4">
           <h1 className="text-center text-3xl">Press Kit</h1>
+        </div>  
+        <div className="video-container my-12">
+        <iframe className="mx-auto md:w-[600px] md:h-[450px]" src="https://www.youtube.com/embed/Jhzj35ON3Vc?si=Q-EsqFaTxhjvXNGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div className="video-container my-12">
           <iframe

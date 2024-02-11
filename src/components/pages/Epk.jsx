@@ -8,15 +8,6 @@ function Epk() {
         <div className="video-container my-12">
         <iframe className="mx-auto md:w-[600px] md:h-[450px]" src="https://www.youtube.com/embed/Jhzj35ON3Vc?si=Q-EsqFaTxhjvXNGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        <div className="video-container my-12">
-          <iframe
-            title="sfbyoutube"
-            className="mx-auto md:w-[600px] md:h-[450px]"
-            src="https://www.youtube.com/embed/KMlMOOfK7BU"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
         <div className="my-4 flex flex-col p-4 ">
           <img
             className="mx-auto"

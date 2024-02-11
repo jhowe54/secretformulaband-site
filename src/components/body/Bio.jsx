@@ -3,7 +3,7 @@ function Bio() {
   return (
     <>
       <img
-        src={outsidepic2}
+        src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/IMG_0590.png?t=2024-02-11T18%3A36%3A09.825Z"
         className="xl:w-1/2 lg:w-2/3 md:w-4/5 w-full xl:p-0  rounded-md my-8 box-content grayscale contrast-[1.4]"
         alt="Band Pic"
       />
@@ -37,7 +37,8 @@ function Bio() {
         that is Secret Formula Band as we know it today.
       </p>
       <div className="video-container">
-      <iframe className="mx-auto md:w-[1024px] md:h-[576px]" src="https://www.youtube.com/embed/Jhzj35ON3Vc?si=Q-EsqFaTxhjvXNGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe className="mx-auto md:w-[1024px] md:h-[576px] mb-4" src="https://www.youtube.com/embed/Jhzj35ON3Vc?si=Q-EsqFaTxhjvXNGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe className="mx-auto md:w-[1024px] md:h-[576px]" src="https://www.youtube.com/embed/F0mA7bsaOmo?si=JnGFIB2t_25Pom7b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </>
   );

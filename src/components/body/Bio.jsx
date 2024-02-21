@@ -14,14 +14,10 @@ function Bio() {
         influences from their hometowns, harnessing the soulful blues of
         Memphis, the swampy rhythms of Louisiana, the rugged rock of Alabama,
         and the gritty storytelling of the Carolinas to craft a distinctive and
-        unforgettable sound all their own.
-      </p>
-      <p id="bio-2" className=" lg:px-44 md:px-10 px-4 py-4 lg:text-xl">
-        The 5-piece band shows a dynamic range of energy and songwriting in its
-        first 3 singles, “Cajun Queen”, “Get Your Lovin’”, and “Goodbye
-        Carolina”, but all of their work has that unmistakable twang that SFB
-        wears proudly. Come hear the energized, authentic experience that SFB
-        delivers.
+        unforgettable sound all their own. The 5-piece band shows a dynamic
+        range of energy and songwriting in its debut album “Roll Them Dice”, but
+        all of their work has that unmistakable twang that SFB wears proudly.
+        Come hear the energized, authentic experience that SFB delivers.
       </p>
       <p id="bio-2" className="lg:px-44 md:px-10 px-4 py-4 lg:text-xl">
         <span className="font-bold">Mac McArtor</span>{" "}
@@ -37,9 +33,23 @@ function Bio() {
         that is Secret Formula Band as we know it today.
       </p>
       <div className="video-container">
-      <iframe className="mx-auto md:w-[1024px] md:h-[576px] mb-4" src="https://www.youtube.com/embed/Jhzj35ON3Vc?si=Q-EsqFaTxhjvXNGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe className="mx-auto md:w-[1024px] md:h-[576px]" src="https://www.youtube.com/embed/F0mA7bsaOmo?si=JnGFIB2t_25Pom7b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+        <iframe
+          className="mx-auto md:w-[1024px] md:h-[576px] mb-4"
+          src="https://www.youtube.com/embed/Jhzj35ON3Vc?si=Q-EsqFaTxhjvXNGk"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          className="mx-auto md:w-[1024px] md:h-[576px]"
+          src="https://www.youtube.com/embed/F0mA7bsaOmo?si=JnGFIB2t_25Pom7b"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
     </>
   );
 }

@@ -3,7 +3,7 @@ function Bio() {
   return (
     <>
       <img
-        src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/IMG_0590.png?t=2024-02-11T18%3A36%3A09.825Z"
+        src="https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/outsidepicnew.jpg?t=2024-02-21T16%3A58%3A23.889Z"
         className="xl:w-1/2 lg:w-2/3 md:w-4/5 w-full xl:p-0  rounded-md my-8 box-content grayscale contrast-[1.4]"
         alt="Band Pic"
       />

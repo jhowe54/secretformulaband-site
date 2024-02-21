@@ -99,7 +99,7 @@ nav {
 }
 
 #header {
-  background-image: url("https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/eveningmuseGroup.jpg?t=2024-02-11T18%3A09%3A19.163Z");
+  background-image: url("https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/eveningmuseGroupDownsized.jpg");
   background-position: 0% 80%; ;
   background-size: cover;
   background-repeat: no-repeat;
@@ -126,25 +126,25 @@ nav {
   background-repeat: no-repeat;
 }
 #acc-img-2 {
-  background-image: url("https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/monMuse.jpg?t=2024-02-11T18%3A07%3A56.608Z");
+  background-image: url("https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/monMuseNew.jpg?t=2024-02-21T16%3A54%3A11.974Z");
   background-position: 48% 25%; ;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #acc-img-3 {
-  background-image: url("https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/joemuse1.jpg?t=2024-02-11T18%3A08%3A06.851Z");
+  background-image: url("https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/joemuse1New.jpg?t=2024-02-21T16%3A56%3A09.948Z");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #acc-img-4 {
-  background-image: url("https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/macMuse1.jpg?t=2024-02-11T18%3A08%3A15.304Z");
+  background-image: url("https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/macMuse1.jpg?t=2024-02-21T16%3A55%3A14.730Z");
   background-position: 100% 40%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #acc-img-5 {
-  background-image: url("https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/weirMuse.jpg?t=2024-02-11T18%3A08%3A24.927Z");
+  background-image: url("https://iuqjmypymqoxzqdtxjif.supabase.co/storage/v1/object/public/images/eveningmuse/weirMuseNew.jpg?t=2024-02-21T16%3A53%3A13.123Z");
   background-position: 48% 25%;
   background-size: cover;
   background-repeat: no-repeat;

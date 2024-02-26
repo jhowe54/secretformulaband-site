@@ -75,10 +75,18 @@ function Epk() {
             Show Dates and People in Attendance:
           </h2>
           <ul className="list-disc list-outside">
+          <li>
+              <div>
+                <p>
+                  <strong>02/09/24</strong> Evening Muse with Council Ring
+                  (SOLD OUT at 120)
+                </p>
+              </div>
+            </li>
             <li>
               <div>
                 <p>
-                  <strong>09/16/23</strong>The Pour House with Joe May &
+                  <strong>09/16/23</strong> The Pour House with Joe May &
                   Riverdawg (105 at $10/$12)
                 </p>
               </div>
@@ -94,7 +102,7 @@ function Epk() {
             <li>
               <div>
                 <p>
-                  <strong>5/20/23</strong> Crawfish for a Cause Charlotte -
+                  <strong>05/20/23</strong> Crawfish for a Cause Charlotte -
                   nonprofit event raising awareness for mental health (600+
                   admitted at $40/ticket)
                 </p>
@@ -103,7 +111,7 @@ function Epk() {
             <li>
               <div>
                 <p>
-                  <strong>4/15/23</strong> Evening Muse with Eden Hill (102 at
+                  <strong>04/15/23</strong> Evening Muse with Eden Hill (102 at
                   $10/$12)
                 </p>
               </div>
@@ -111,7 +119,7 @@ function Epk() {
             <li>
               <div>
                 <p>
-                  <strong>12/2/22</strong> Visulite Theater supporting Pluto
+                  <strong>12/02/22</strong> Visulite Theater supporting Pluto
                   Gang (270 at $15)
                 </p>
               </div>

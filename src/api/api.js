@@ -24,8 +24,18 @@ async function loadSchedule() {
   .from('shows')
   .select('*')
   .order('date', {ascending: true})
+  console.log("schedule", data)
   return data;
-  
 }
 
-export { postBookingDetails, loadSchedule };
+
+async function loadSelectedEPKData(row) {
+  const {data} = await supabase
+  .from('epk')
+  .select('*')
+  .eq("description", row)
+  console.log("API data", data)
+  return data[0];
+}
+
+export { postBookingDetails, loadSchedule, loadSelectedEPKData };

@@ -1,4 +1,30 @@
+import { useEffect, useState } from "react";
+import { loadSelectedEPKData} from "../../api/api"
+
 function Epk() {
+
+  const [bioData, setBioData] = useState({});
+  const [err, setErr] = useState({})
+
+  useEffect(() => {
+    const abortController = new AbortController();
+    async function getBioData() {
+      try {
+        const data = await loadSelectedEPKData("epkBio");
+        setBioData(data.textContent)
+      } catch(error) {
+        if (error.name !== "AbortError") {
+          setErr(error)
+        } else {
+          console.log("aborted")
+        }
+      }
+    }
+    getBioData();
+    return () => abortController.abort()
+  }, [])
+
+
   return (
     <div className="p-4 text-white">
       <div className=" md:p-8 lg:p-20 p-2">
@@ -6,7 +32,7 @@ function Epk() {
           <h1 className="text-center text-3xl">Press Kit</h1>
         </div>  
         <div className="video-container my-12">
-        <iframe className="mx-auto md:w-[600px] md:h-[450px]" src="https://www.youtube.com/embed/Jhzj35ON3Vc?si=Q-EsqFaTxhjvXNGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe className="mx-auto md:w-[600px] md:h-[450px]" src="https://www.youtube.com/embed/Jhzj35ON3Vc?si=Q-EsqFaTxhjvXNGk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </div>
         <div className="my-4 flex flex-col p-4 ">
           <img
@@ -24,24 +50,15 @@ function Epk() {
           </div>
           <div className="mb-[20px]">
             <h2 className="font-bold">Full Bio:</h2>
-            <p>
-              Riding a new wave of southern rock into the heart of the
-              Carolinas, Secret Formula Band delivers a rugged, soulful noise to
-              the stage for all to enjoy. This band artfully weaves a rich
-              tapestry of musical influences from their hometowns, harnessing
-              the soulful blues of Memphis, the swampy rhythms of Louisiana, the
-              rugged rock of Alabama, and the gritty storytelling of the
-              Carolinas to craft a distinctive and unforgettable sound all their
-              own.
-            </p>
+            
+              {bioData && (
+                <p>{bioData.pg1}</p>
+              )}
+         
             <br />
-            <p>
-              The 5-piece band shows a dynamic range of energy and songwriting
-              in its first 3 singles, “Cajun Queen”, “Get Your Lovin’”, and
-              “Goodbye Carolina”, but all of their work has that unmistakable
-              twang that SFB wears proudly. Come hear the energized, authentic
-              experience that SFB delivers.
-            </p>
+            {bioData && (
+                <p>{bioData.pg2}</p>
+              )}
           </div>
           <div className="mb-[20px]">
             <p>
